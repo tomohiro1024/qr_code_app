@@ -11,21 +11,23 @@ class _QrCodePageState extends State<QrCodePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('QR Code Page'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'QR Code Page',
-            ),
             ElevatedButton(
-              onPressed: () {
-                // Add your QR code generation logic here
-              },
-              child: const Text('Generate QR Code'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: () {},
+              child: const Text('QRコードをスキャンする'),
             ),
           ],
         ),
